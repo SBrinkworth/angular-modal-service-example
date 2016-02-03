@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="modalApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Modal Example</title>
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body ng-controller="mainCtrl">
+
+    <!-- Open Custom Confirmation Modal -->
+    Click button to display confirmation modal
+    <button type="button" ng-click="openConfirm()">Open Confirmation</button>
+
+    <br>
+    <br>
+
+    <!-- Custom Confirmation Modal Response -->
+    Confirmation Answer: {{confirmationAnswer}}
+
+    <br>
+    <br>
+
+    <!-- Open Custom Form Modal -->
+    Click button to display form modal
+    <button type="button" ng-click="openForm(user)">Open Form</button>
+
+    <br>
+    <br>
+
+    <!-- Custom Form Modal Response -->
+    Form Response: {
+      <br>
+      userName: "{{user.userName}}",
+      <br>
+      email: "{{user.email}}",
+      <br>
+      password: "{{user.password}}",
+      <br>
+      aboutYou: "{{user.aboutYou}}"
+      <br>
+    }
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+
+    <!-- Inclue script that downloaded through npm -->
+    <script src="node_modules\angular-modal-service\dst\angular-modal-service.min.js"></script>
+
+    <script src="./app/app.js"></script>
+    <script src="./app/controllers/mainCtrl.js"></script>
+    <script src="./app/modals/confirm/confirmCtrl.js"></script>
+    <script src="./app/modals/form/formCtrl.js"></script>
+  </body>
+</html>

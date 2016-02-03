@@ -1,0 +1,12 @@
+<div class="overlay">
+  <form ng-submit="close(newUser)">
+    Username: <input type="text" placeholder="Username" ng-model="newUser.userName" required><br>
+    Email: <input type="email" placeholder="Email" ng-model="newUser.email" required><br>
+    Password: <input type="password" placeholder="Password" ng-model="newUser.password" required><br>
+    About You: <textarea placeholder="About You" ng-model="newUser.aboutYou"></textarea>
+    <br />
+    <button type="submit">submit</button>
+    <button type="button" ng-click="close(user)">cancel</button>
+  </form>
+</div>
+<div class="fade" ng-click="close(user)"></div>
