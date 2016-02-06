@@ -1,4 +1,8 @@
 <div class="overlay">
+
+  <!-- The ng-submit runs the close function passing it newUser.
+       newUser will be passed back to the controller that opend this modal
+       when this modal closes -->
   <form ng-submit="close(newUser)">
     Username: <input type="text" placeholder="Username" ng-model="newUser.userName" required><br>
     Email: <input type="email" placeholder="Email" ng-model="newUser.email" required><br>
@@ -6,7 +10,13 @@
     About You: <textarea placeholder="About You" ng-model="newUser.aboutYou"></textarea>
     <br />
     <button type="submit">submit</button>
+
+    <!-- The ng-click runs the close function passing it user.
+         user will be passed back to the controller that opend this modal
+         when this modal closes -->
     <button type="button" ng-click="close(user)">cancel</button>
   </form>
 </div>
+
+<!-- This closes the modal when you click on the dimmed area around it -->
 <div class="fade" ng-click="close(user)"></div>
